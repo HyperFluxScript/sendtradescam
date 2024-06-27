@@ -1,0 +1,42 @@
+import requests
+import time
+import random
+
+# Your Discord webhook URL
+webhook_url = 'https://discord.com/api/webhooks/1252206364768600086/cYZBPmU7WM2AQDhemqC0gAZFa4S_4Blj5nr06mBj2_eSAL547X0sFzwDiFivGkeQ1DEh'
+
+def generate_random_user_id():
+    return f"<@{random.randint(10**17, 10**18 - 1)}>"
+
+def send_message():
+    user_id = generate_random_user_id()
+    data = {
+        "content": None,
+        "embeds": [
+            {
+                "title": "Trade Scam",
+                "description": f"{user_id} has Successfully Trade Scammed",
+                "color": 4718336,
+                "footer": {
+                    "text": "Thanks for using this script!👑"
+                },
+                "image": {
+                    "url": "https://i.ibb.co/GWVWjjK/Screenshot-2024-06-01-112120.png"
+                }
+            }
+        ],
+        "attachments": []
+    }
+    
+    response = requests.post(webhook_url, json=data)
+    if response.status_code == 204:
+        print("Message sent successfully")
+    else:
+        print(f"Failed to send message: {response.status_code}")
+
+# Main loop to send messages at random intervals between 1 and 30 minutes
+while True:
+    send_message()
+    interval = random.randint(60, 1800)  # Random interval between 60 and 1800 seconds (1 to 30 minutes)
+    print(f"Next message in {interval // 60} minutes and {interval % 60} seconds")
+    time.sleep(interval)
