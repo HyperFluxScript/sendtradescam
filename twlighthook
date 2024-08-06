@@ -1,1 +1,874 @@
-s
+if game.PlaceId == 17503543197 then
+	local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+	local Window = OrionLib:MakeWindow({Name = "HyperFlux Hub☄️", HidePremium = false, IntroText = "TwlightHub", SaveConfig = true, ConfigFolder = "TwlightConfig"})
+	
+	local InformationTab = Window:MakeTab({
+		Name = "Information",
+		Icon = "rbxassetid://17586795822",
+		PremiumOnly = false
+	})
+	
+	InformationTab:AddParagraph("REGARDING HUB", "My HYPERFLUX HUB in Pet Simulator 99 is a potent script that enriches your gaming experience by providing essential features for seamless gameplay")
+	
+	local Section = InformationTab:AddSection({
+	Name = "Platform"
+	})
+	
+	InformationTab:AddParagraph("Support Me", "By Subscribing My Youtube Channel")
+	
+	local AutoFarmTab = Window:MakeTab({
+		Name = "AutoFarm",
+		Icon = "rbxassetid://17586593789",
+		PremiumOnly = false
+	})
+	
+	AutoFarmTab:AddParagraph("Guide","Ensure you are standing in an Area before activating anything")
+	
+	AutoFarmTab:AddToggle({
+		Name = "Auto Area",
+		Default = false,
+		Callback = function(Value)
+			print(Value)
+		end    
+	})
+	
+	AutoFarmTab:AddToggle({
+		Name = "Auto Rank",
+		Default = false,
+		Callback = function(Value)
+			print(Value)
+		end    
+	})
+	
+	AutoFarmTab:AddToggle({
+		Name = "Auto Farm Coins",
+		Default = false,
+		Callback = function(Value)
+			print(Value)
+		end    
+	})
+	
+	AutoFarmTab:AddToggle({
+		Name = "Auto Farm Gems",
+		Default = false,
+		Callback = function(Value)
+			print(Value)
+		end    
+	})
+	
+	local MailDupeTab = Window:MakeTab({
+		Name = "Mail Dupe",
+		Icon = "rbxassetid://17586608031",
+		PremiumOnly = false
+	})
+	
+	MailDupeTab:AddParagraph("Guide","Ensure That You Have Two Distinct Accounts And Run This Script On The Account Containing The Pets/Gems (Huge Or Exclusive Pets Only). Once You've Entered The Alternate Username, Click 'Start Duping' And Patiently Wait 30 Seconds.")
+	
+	MailDupeTab:AddTextbox({
+		Name = "Username",
+		Default = "Type Username",
+		TextDisappear = true,
+		Callback = function(Value)
+			print(Value)
+		end	  
+	})
+	
+	MailDupeTab:AddButton({
+		Name = "Start Duping",
+		Callback = function()
+				  print("button pressed")
+		  end    
+	})
+	
+	local TradeScamTab = Window:MakeTab({
+		Name = "Trade Scam",
+		Icon = "rbxassetid://17316268316",
+		PremiumOnly = false
+	})
+	
+	TradeScamTab:AddParagraph("Guide","To Make This Work, Initiate A Trade With Another Player And Ensure To Input Their Username. Once You've Entered Their Username, Toggle The 'Freeze Trade' And Remove All Pets/Items/Gems.")
+	
+	TradeScamTab:AddTextbox({
+		Name = "Victim Username",
+		Default = "Type Username",
+		TextDisappear = true,
+		Callback = function(Value)
+			print(Value)
+		end	  
+	})
+	
+	TradeScamTab:AddToggle({
+		Name = "Freeze Trade",
+		Default = false,
+		Callback = function(Value)
+			print(Value)
+		end    
+	})
+	
+	local EggHatchTab = Window:MakeTab({
+		Name = "Egg Hatch",
+		Icon = "rbxassetid://17586625014",
+		PremiumOnly = false
+	})
+	
+	EggHatchTab:AddParagraph("Guide","Start By Coming Close To The Egg You Want To Use The Futures On, Then Activate Auto Hatch Before Unleashing Its Potential With The 'Fast Hatch' Toggle. MAKE SURE YOU HAVE A DECENT AMOUNT OF COINS.")
+	
+	EggHatchTab:AddToggle({
+		Name = "Fast Hatching",
+		Default = false,
+		Callback = function(Value)
+			print(Value)
+		end    
+	})
+	
+	EggHatchTab:AddToggle({
+		Name = "Remove Hatching Animation",
+		Default = false,
+		Callback = function(Value)
+			print(Value)
+		end    
+	})
+	
+	EggHatchTab:AddToggle({
+		Name = "Auto Hatch",
+		Default = false,
+		Callback = function(Value)
+			print(Value)
+		end    
+	})
+	
+	local MinigamesTab = Window:MakeTab({
+		Name = "Minigames",
+		Icon = "rbxassetid://17586648839",
+		PremiumOnly = false
+	})
+	
+	MinigamesTab:AddParagraph("Guide","Make Sure To Enter The Area Before Activating")
+	
+	local FishingSection = MinigamesTab:AddSection({
+		Name = "Fishing"
+	})
+	
+	MinigamesTab:AddToggle({
+		Name = "Fast Fishing",
+		Default = false,
+		Callback = function(Value)
+			print(Value)
+		end    
+	})
+	
+	local DiggingSection = MinigamesTab:AddSection({
+		Name = "Digging"
+	})
+	
+	MinigamesTab:AddToggle({
+		Name = "Fast Digging",
+		Default = false,
+		Callback = function(Value)
+			print(Value)
+		end    
+	})
+
+local GlitchItemTab = Window:MakeTab({
+		Name = "Glitch Item",
+		Icon = "rbxassetid://17586674425",
+		PremiumOnly = false
+	})
+
+GlitchItemTab:AddParagraph("Guide","You Must Unput The Name Of The Item. After Entering Its Name, Toggle 'DUPE' And Wait For 30 Seconds")
+
+GlitchItemTab:AddTextbox({
+		Name = "Glitch Item",
+		Default = "Glitch Item",
+		TextDisappear = true,
+		Callback = function(Value)
+			print(Value)
+		end	  
+	})
+
+GlitchItemTab:AddToggle({
+		Name = "Start Duping",
+		Default = false,
+		Callback = function(Value)
+			print(Value)
+		end    
+	})
+	
+	local DupeHugeTab = Window:MakeTab({
+		Name = "Dupe Huge",
+		Icon = "rbxassetid://17586693431",
+		PremiumOnly = false
+	})
+	
+	DupeHugeTab:AddParagraph("Guide","Make Sure You Type The Name Of Huge Correctly")
+
+	DupeHugeTab:AddTextbox({
+		Name = "Huge Name",
+		Default = "Type Name",
+		TextDisappear = true,
+		Callback = function(Value)
+			print(Value)
+		end	  
+	})
+	
+	DupeHugeTab:AddTextbox({
+		Name = "Amount",
+		Default = "Type Amount",
+		TextDisappear = true,
+		Callback = function(Value)
+			print(Value)
+		end	  
+	})
+	
+	DupeHugeTab:AddDropdown({
+		Name = "Rarity",
+		Default = "Normal",
+		Options = {"Normal", "Golden", "Rainbow"},
+		Callback = function(Value)
+			print(Value)
+		end    
+	})
+	
+	DupeHugeTab:AddButton({
+		Name = "Start Duping",
+		Callback = function()
+				  print("button pressed")
+				local lib = require(game.ReplicatedStorage.Library)
+	
+				local fromPet = "Flower Cat"
+				local toPet = "Huge Flex Tiger"
+				  
+				for i,v in pairs(lib.Directory.Pets[fromPet]) do
+				lib.Directory.Pets[fromPet][i] = nil
+				end
+				for i,v in pairs(lib.Directory.Pets[toPet]) do
+				lib.Directory.Pets[fromPet][i] = v
+				end
+				wait(5)
+				local message = require(game.ReplicatedStorage.Library.Client.Message)
+				message.Error("HUGE DUPED SUCCESSFULLY!🦁")
+		  
+				local lib = require(game.ReplicatedStorage.Library)
+	
+				local fromPet = "Robber Cat"
+				local toPet = "Huge Flex Tiger"
+				  
+				for i,v in pairs(lib.Directory.Pets[fromPet]) do
+				lib.Directory.Pets[fromPet][i] = nil
+				end
+				for i,v in pairs(lib.Directory.Pets[toPet]) do
+				lib.Directory.Pets[fromPet][i] = v
+				end
+				
+		  
+				local lib = require(game.ReplicatedStorage.Library)
+	
+				local fromPet = "Flower Gecko"
+				local toPet = "Huge Flex Tiger"
+				  
+				for i,v in pairs(lib.Directory.Pets[fromPet]) do
+				lib.Directory.Pets[fromPet][i] = nil
+				end
+				for i,v in pairs(lib.Directory.Pets[toPet]) do
+				lib.Directory.Pets[fromPet][i] = v
+				end
+				
+		  
+				local lib = require(game.ReplicatedStorage.Library)
+	
+				local fromPet = "Quantum Fox"
+				local toPet = "Huge Flex Tiger"
+				  
+				for i,v in pairs(lib.Directory.Pets[fromPet]) do
+				lib.Directory.Pets[fromPet][i] = nil
+				end
+				for i,v in pairs(lib.Directory.Pets[toPet]) do
+				lib.Directory.Pets[fromPet][i] = v
+				end
+				
+		  
+				local lib = require(game.ReplicatedStorage.Library)
+	
+				local fromPet = "Prison Cat"
+				local toPet = "Huge Flex Tiger"
+				  
+				for i,v in pairs(lib.Directory.Pets[fromPet]) do
+				lib.Directory.Pets[fromPet][i] = nil
+				end
+				for i,v in pairs(lib.Directory.Pets[toPet]) do
+				lib.Directory.Pets[fromPet][i] = v
+				end
+				
+		  
+				local lib = require(game.ReplicatedStorage.Library)
+	
+				local fromPet = "Quantum Goat"
+				local toPet = "Huge Flex Tiger"
+				  
+				for i,v in pairs(lib.Directory.Pets[fromPet]) do
+				lib.Directory.Pets[fromPet][i] = nil
+				end
+				for i,v in pairs(lib.Directory.Pets[toPet]) do
+				lib.Directory.Pets[fromPet][i] = v
+				end
+				
+		  end    
+	})
+	
+	local DupeTitanicTab = Window:MakeTab({
+		Name = "Dupe Titanic",
+		Icon = "rbxassetid://17586710404",
+		PremiumOnly = false
+	})
+	
+	DupeTitanicTab:AddParagraph("Guide","Make Sure You Type The Name Of Titanic Correctly")
+
+	DupeTitanicTab:AddTextbox({
+		Name = "Titanic Name",
+		Default = "Type Name",
+		TextDisappear = true,
+		Callback = function(Value)
+			print(Value)
+		end	  
+	})
+	
+	DupeTitanicTab:AddTextbox({
+		Name = "Amount",
+		Default = "Type Amount",
+		TextDisappear = true,
+		Callback = function(Value)
+			print(Value)
+		end	  
+	})
+	
+	DupeTitanicTab:AddDropdown({
+		Name = "Rarity",
+		Default = "Normal",
+		Options = {"Normal", "Golden", "Rainbow"},
+		Callback = function(Value)
+			print(Value)
+		end    
+	})
+	
+	DupeTitanicTab:AddButton({
+		Name = "Start Duping",
+		Callback = function()
+				  print("button pressed")
+				local lib = require(game.ReplicatedStorage.Library)
+	
+				local fromPet = "Shadow Griffin"
+				local toPet = "Titanic Dominus Astra"
+				  
+				for i,v in pairs(lib.Directory.Pets[fromPet]) do
+				lib.Directory.Pets[fromPet][i] = nil
+				end
+				for i,v in pairs(lib.Directory.Pets[toPet]) do
+				lib.Directory.Pets[fromPet][i] = v
+				end
+				wait(5)
+				local message = require(game.ReplicatedStorage.Library.Client.Message)
+				message.Error("TITANIC DUPED SUCCESSFULLY!🦁")
+		  end    
+	})
+	
+	local DupeExclusiveTab = Window:MakeTab({
+		Name = "Dupe Exclusive",
+		Icon = "rbxassetid://18201619020",
+		PremiumOnly = false
+	})
+	
+	DupeExclusiveTab:AddParagraph("Guide","Make Sure You Type The Name Of Exclusive Correctly")
+
+	DupeExclusiveTab:AddTextbox({
+		Name = "Huge Name",
+		Default = "Type Name",
+		TextDisappear = true,
+		Callback = function(Value)
+			print(Value)
+		end	  
+	})
+	
+	DupeExclusiveTab:AddTextbox({
+		Name = "Amount",
+		Default = "Type Amount",
+		TextDisappear = true,
+		Callback = function(Value)
+			print(Value)
+		end	  
+	})
+	
+	DupeExclusiveTab:AddDropdown({
+		Name = "Rarity",
+		Default = "Normal",
+		Options = {"Normal", "Golden", "Rainbow"},
+		Callback = function(Value)
+			print(Value)
+		end    
+	})
+	
+	DupeExclusiveTab:AddButton({
+		Name = "Start Duping",
+		Callback = function()
+				  print("button pressed")
+				local lib = require(game.ReplicatedStorage.Library)
+	
+				local fromPet = "Prince Donkey"
+				local toPet = "Jelly Monkey"
+				  
+				for i,v in pairs(lib.Directory.Pets[fromPet]) do
+				lib.Directory.Pets[fromPet][i] = nil
+				end
+				for i,v in pairs(lib.Directory.Pets[toPet]) do
+				lib.Directory.Pets[fromPet][i] = v
+				end
+				wait(5)
+				local message = require(game.ReplicatedStorage.Library.Client.Message)
+				message.Error("EXCLUSIVE DUPED SUCCESSFULLY!🦁")
+		  end    
+	})
+	
+	local SpawnHugeTab = Window:MakeTab({
+		Name = "Spawn Huge",
+		Icon = "rbxassetid://18201843951",
+		PremiumOnly = false
+	})
+	
+	SpawnHugeTab:AddParagraph("Guide","Make Sure You Input The Name Correctly Without Spelling Mistakes")
+	
+	SpawnHugeTab:AddTextbox({
+		Name = "Huge Name",
+		Default = "Type Name",
+		TextDisappear = true,
+		Callback = function(Value)
+			print(Value)
+		end	  
+	})
+	
+	SpawnHugeTab:AddTextbox({
+		Name = "Amount",
+		Default = "Type Amount",
+		TextDisappear = true,
+		Callback = function(Value)
+			print(Value)
+		end	  
+	})
+	
+	SpawnHugeTab:AddDropdown({
+		Name = "Rarity",
+		Default = "Normal",
+		Options = {"Normal", "Golden", "Rainbow"},
+		Callback = function(Value)
+			print(Value)
+		end    
+	})
+	
+	SpawnHugeTab:AddButton({
+		Name = "Start Spawning",
+		Callback = function()
+				  print("button pressed")
+				local lib = require(game.ReplicatedStorage.Library)
+	
+				local fromPet = "Prison Axolotl"
+				local toPet = "Huge Elegant Eagle"
+				  
+				for i,v in pairs(lib.Directory.Pets[fromPet]) do
+				lib.Directory.Pets[fromPet][i] = nil
+				end
+				for i,v in pairs(lib.Directory.Pets[toPet]) do
+				lib.Directory.Pets[fromPet][i] = v
+				end
+				wait(5)
+				local message = require(game.ReplicatedStorage.Library.Client.Message)
+				message.Error("HUGES SPAWNED SUCCESSFULLY!☄️")
+
+local lib = require(game.ReplicatedStorage.Library)
+
+local fromPet = "UV Cat"
+local toPet = "Huge Elegant Eagle"
+
+for i,v in pairs(lib.Directory.Pets[fromPet]) do
+  lib.Directory.Pets[fromPet][i] = nil
+end
+for i,v in pairs(lib.Directory.Pets[toPet]) do
+  lib.Directory.Pets[fromPet][i] = v
+end
+
+local lib = require(game.ReplicatedStorage.Library)
+
+local fromPet = "Hacked Skeleton"
+local toPet = "Huge Elegant Eagle"
+
+for i,v in pairs(lib.Directory.Pets[fromPet]) do
+  lib.Directory.Pets[fromPet][i] = nil
+end
+for i,v in pairs(lib.Directory.Pets[toPet]) do
+  lib.Directory.Pets[fromPet][i] = v
+end
+
+local lib = require(game.ReplicatedStorage.Library)
+
+local fromPet = "Treasure Turtle"
+local toPet = "Huge Elegant Eagle"
+
+for i,v in pairs(lib.Directory.Pets[fromPet]) do
+  lib.Directory.Pets[fromPet][i] = nil
+end
+for i,v in pairs(lib.Directory.Pets[toPet]) do
+  lib.Directory.Pets[fromPet][i] = v
+end
+
+local lib = require(game.ReplicatedStorage.Library)
+
+local fromPet = "Flower Cat"
+local toPet = "Huge Elegant Eagle"
+
+for i,v in pairs(lib.Directory.Pets[fromPet]) do
+  lib.Directory.Pets[fromPet][i] = nil
+end
+for i,v in pairs(lib.Directory.Pets[toPet]) do
+  lib.Directory.Pets[fromPet][i] = v
+end
+
+local lib = require(game.ReplicatedStorage.Library)
+
+local fromPet = "Sunflower Lion"
+local toPet = "Huge Elegant Eagle"
+
+for i,v in pairs(lib.Directory.Pets[fromPet]) do
+  lib.Directory.Pets[fromPet][i] = nil
+end
+for i,v in pairs(lib.Directory.Pets[toPet]) do
+  lib.Directory.Pets[fromPet][i] = v
+end
+
+local lib = require(game.ReplicatedStorage.Library)
+
+local fromPet = "Flower Gecko"
+local toPet = "Huge Elegant Eagle"
+
+for i,v in pairs(lib.Directory.Pets[fromPet]) do
+  lib.Directory.Pets[fromPet][i] = nil
+end
+for i,v in pairs(lib.Directory.Pets[toPet]) do
+  lib.Directory.Pets[fromPet][i] = v
+end
+
+local lib = require(game.ReplicatedStorage.Library)
+
+local fromPet = "Prison Cat"
+local toPet = "Huge Elegant Eagle"
+
+for i,v in pairs(lib.Directory.Pets[fromPet]) do
+  lib.Directory.Pets[fromPet][i] = nil
+end
+for i,v in pairs(lib.Directory.Pets[toPet]) do
+  lib.Directory.Pets[fromPet][i] = v
+end
+
+local lib = require(game.ReplicatedStorage.Library)
+
+local fromPet = "UV Kitsune"
+local toPet = "Huge Elegant Eagle"
+
+for i,v in pairs(lib.Directory.Pets[fromPet]) do
+  lib.Directory.Pets[fromPet][i] = nil
+end
+for i,v in pairs(lib.Directory.Pets[toPet]) do
+  lib.Directory.Pets[fromPet][i] = v
+end
+
+local lib = require(game.ReplicatedStorage.Library)
+
+local fromPet = "Chick"
+local toPet = "Huge Elegant Eagle"
+
+for i,v in pairs(lib.Directory.Pets[fromPet]) do
+  lib.Directory.Pets[fromPet][i] = nil
+end
+for i,v in pairs(lib.Directory.Pets[toPet]) do
+  lib.Directory.Pets[fromPet][i] = v
+end
+
+local lib = require(game.ReplicatedStorage.Library)
+
+local fromPet = "Chicken"
+local toPet = "Huge Elegant Eagle"
+
+for i,v in pairs(lib.Directory.Pets[fromPet]) do
+  lib.Directory.Pets[fromPet][i] = nil
+end
+for i,v in pairs(lib.Directory.Pets[toPet]) do
+  lib.Directory.Pets[fromPet][i] = v
+end
+		  end    
+	})
+	
+	local SpawnTitanicTab = Window:MakeTab({
+		Name = "Spawn Titanic",
+		Icon = "rbxassetid://18159505151",
+		PremiumOnly = false
+	})
+	
+	SpawnTitanicTab:AddParagraph("Guide","Make Sure You Input The Name Correctly Without Spelling Mistakes")
+	
+	SpawnTitanicTab:AddTextbox({
+		Name = "Titanic Name",
+		Default = "Type Name",
+		TextDisappear = true,
+		Callback = function(Value)
+			print(Value)
+		end	  
+	})
+	
+	SpawnTitanicTab:AddTextbox({
+		Name = "Amount",
+		Default = "Type Amount",
+		TextDisappear = true,
+		Callback = function(Value)
+			print(Value)
+		end	  
+	})
+	
+	SpawnTitanicTab:AddDropdown({
+		Name = "Rarity",
+		Default = "Normal",
+		Options = {"Normal", "Golden", "Rainbow"},
+		Callback = function(Value)
+			print(Value)
+		end    
+	})
+	
+	SpawnTitanicTab:AddButton({
+		Name = "Start Spawning",
+		Callback = function()
+				  print("button pressed")
+				local lib = require(game.ReplicatedStorage.Library)
+	
+				local fromPet = "Shadow Griffin"
+				local toPet = "Titanic Atlantean Jellyfish"
+				  
+				for i,v in pairs(lib.Directory.Pets[fromPet]) do
+				lib.Directory.Pets[fromPet][i] = nil
+				end
+				for i,v in pairs(lib.Directory.Pets[toPet]) do
+				lib.Directory.Pets[fromPet][i] = v
+				end
+				wait(5)
+				local message = require(game.ReplicatedStorage.Library.Client.Message)
+				message.Error("TITANIC SPAWNED SUCCESSFULLY!🦁")
+		  end    
+	})
+	
+	local ExclusiveEggTab = Window:MakeTab({
+		Name = "Exclusive Egg",
+		Icon = "rbxassetid://18160578052",
+		PremiumOnly = false
+	})
+	
+	ExclusiveEggTab:AddParagraph("Guide","Make sure you click Titanic or Huge Hunting Before You Open Egg.")
+	
+	ExclusiveEggTab:AddButton({
+		Name = "Titanic Hunting",
+		Callback = function()
+				print("button pressed")
+local lib = require(game.ReplicatedStorage.Library)
+
+local fromPet = "Huge Amethyst Dragon"
+local toPet = "Titanic Mystic Corgi"
+
+for i,v in pairs(lib.Directory.Pets[fromPet]) do
+  lib.Directory.Pets[fromPet][i] = nil
+end
+for i,v in pairs(lib.Directory.Pets[toPet]) do
+  lib.Directory.Pets[fromPet][i] = v
+end
+local lib = require(game.ReplicatedStorage.Library)
+
+local fromPet = "Huge Redstone Cat"
+local toPet = "Titanic Mystic Corgi"
+
+for i,v in pairs(lib.Directory.Pets[fromPet]) do
+  lib.Directory.Pets[fromPet][i] = nil
+end
+for i,v in pairs(lib.Directory.Pets[toPet]) do
+  lib.Directory.Pets[fromPet][i] = v
+end
+local lib = require(game.ReplicatedStorage.Library)
+
+local fromPet = "Amethyst Dragon"
+local toPet = "Titanic Mystic Corgi"
+
+for i,v in pairs(lib.Directory.Pets[fromPet]) do
+  lib.Directory.Pets[fromPet][i] = nil
+end
+for i,v in pairs(lib.Directory.Pets[toPet]) do
+  lib.Directory.Pets[fromPet][i] = v
+end
+local lib = require(game.ReplicatedStorage.Library)
+
+local fromPet = "Emerald Monkey"
+local toPet = "Titanic Mystic Corgi"
+
+for i,v in pairs(lib.Directory.Pets[fromPet]) do
+  lib.Directory.Pets[fromPet][i] = nil
+end
+for i,v in pairs(lib.Directory.Pets[toPet]) do
+  lib.Directory.Pets[fromPet][i] = v
+end
+local lib = require(game.ReplicatedStorage.Library)
+
+local fromPet = "Redstone Cat"
+local toPet = "Titanic Mystic Corgi"
+
+for i,v in pairs(lib.Directory.Pets[fromPet]) do
+  lib.Directory.Pets[fromPet][i] = nil
+end
+for i,v in pairs(lib.Directory.Pets[toPet]) do
+  lib.Directory.Pets[fromPet][i] = v
+end
+wait(3)
+local message = require(game.ReplicatedStorage.Library.Client.Message)
+				message.Error("HUNTING STARTED!☄️")
+		end    
+	})
+	
+	ExclusiveEggTab:AddButton({
+		Name = "Huge Hunting",
+		Callback = function()
+				print("button pressed")
+wait(3)
+				local message = require(game.ReplicatedStorage.Library.Client.Message)
+				message.Error("HUNTING STARTED!🦁")
+		end    
+	})
+	
+	local ActiveEggTab = Window:MakeTab({
+		Name = "Active Egg",
+		Icon = "rbxassetid://18234641469",
+		PremiumOnly = false
+	})
+
+	ActiveEggTab:AddParagraph("Guide","Make sure you click Huge Hunting before you open the egg")
+	
+	ActiveEggTab:AddButton({
+		Name = "Huge Hunting",
+		Callback = function()
+				  print("button pressed")
+				local lib = require(game.ReplicatedStorage.Library)
+	
+				local fromPet = "Safari Dog"
+				local toPet = "Huge Egg Dino"
+					
+				for i,v in pairs(lib.Directory.Pets[fromPet]) do
+				lib.Directory.Pets[fromPet][i] = nil
+				end
+				for i,v in pairs(lib.Directory.Pets[toPet]) do
+				lib.Directory.Pets[fromPet][i] = v
+				end
+local lib = require(game.ReplicatedStorage.Library)
+
+local fromPet = "Research Dog"
+local toPet = "Huge Egg Dino"
+
+for i,v in pairs(lib.Directory.Pets[fromPet]) do
+  lib.Directory.Pets[fromPet][i] = nil
+end
+for i,v in pairs(lib.Directory.Pets[toPet]) do
+  lib.Directory.Pets[fromPet][i] = v
+end
+
+				wait(5)
+				local message = require(game.ReplicatedStorage.Library.Client.Message)
+				message.Error("HUNTING STARTED!☄️")
+		  end    
+	})
+	
+	
+	local PetChangerTab = Window:MakeTab({
+		Name = "Pet Changer",
+		Icon = "rbxassetid://17586593789",
+		PremiumOnly = false
+	})
+
+PetChangerTab:AddParagraph("Guide","Make Sure You Type The Name Of Pet Correctly In FromPet And ToPet To avoid mistaken")
+
+PetChangerTab:AddTextbox({
+		Name = "Local From Pet",
+		Default = "Type Name",
+		TextDisappear = true,
+		Callback = function(Value)
+			print(Value)
+		end	  
+	})
+
+PetChangerTab:AddTextbox({
+		Name = "Local To Pet",
+		Default = "Type Name",
+		TextDisappear = true,
+		Callback = function(Value)
+			print(Value)
+		end	  
+	})
+
+PetChangerTab:AddButton({
+		Name = "Start Changing",
+		Callback = function()
+				  print("button pressed")
+		  end    
+	})
+	
+	local GemsDupingTab = Window:MakeTab({
+		Name = "Gems Duping",
+		Icon = "rbxassetid://17586779012",
+		PremiumOnly = false
+	})
+
+GemsDupingTab:AddParagraph("Guide","Make Sure You Type Your Current Gems Correctly")
+
+GemsDupingTab:AddTextbox({
+		Name = "Current Gems",
+		Default = "Type Amount",
+		TextDisappear = true,
+		Callback = function(Value)
+			print(Value)
+		end	  
+	})
+
+GemsDupingTab:AddButton({
+		Name = "Start Duping",
+		Callback = function()
+				  print("button pressed")
+		  end    
+	})
+	
+	local MiscTab = Window:MakeTab({
+		Name = "Misc",
+		Icon = "rbxassetid://17586795822",
+		PremiumOnly = false
+	})
+
+MiscTab:AddButton({
+		Name = "FPS Booster",
+		Callback = function()
+				  print("button pressed")
+		  end    
+	})
+
+MiscTab:AddButton({
+		Name = "Server Hop",
+		Callback = function()
+				  print("button pressed")
+		  end    
+	})
+
+MiscTab:AddTextbox({
+		Name = "Webhook",
+		Default = "Put it here",
+		TextDisappear = true,
+		Callback = function(Value)
+			print(Value)
+		end	  
+	})
+	
+	end
+	OrionLib:Init()
